@@ -11,8 +11,8 @@
 
 define( 'DB_HOST', 'localhost' ); // set database host
 define( 'DB_USER', 'root' ); // set database user
-define( 'DB_PASS', 'root' ); // set database password
-define( 'DB_NAME', 'yourdatabasename' ); // set database name
+define( 'DB_PASS', 'toor' ); // set database password
+define( 'DB_NAME', 'test' ); // set database name
 define( 'SEND_ERRORS_TO', 'you@yourwebsite.com' ); //set email notification email address
 define( 'DISPLAY_DEBUG', true ); //display db errors?
 
@@ -43,8 +43,8 @@ echo '</pre>';
  * Auto filter an entire array
  */
 $array = array(
-    'name' => array( 'first' => '"Super awesome"' ), 
-    'email' => '%&&<stuff', 
+    'name' => array( 'first' => '"Super awesome"' ),
+    'email' => '%&&<stuff',
     'something_else' => "'single quotes are awesome'"
 );
 $array = $database->filter( $array );
@@ -101,20 +101,20 @@ $last = $database->lastid();
  */
 //Field names
 $fields = array(
-    'group_parent', 
+    'group_parent',
     'group_name'
 );
 //Values to insert
 $records = array(
     array(
         9, 'Record 9'
-    ), 
+    ),
     array(
         7, 'Record 7'
-    ), 
+    ),
     array(
         7, 'Nick', 'nick@nick.com', 1, 'This will not be added'
-    ), 
+    ),
     array(
         2, 'This is awesome'
     )
@@ -131,7 +131,7 @@ if( $inserted )
  */
 //Fields and values to update
 $update = array(
-    'group_name' => md5( mt_rand(0, 500) ), 
+    'group_name' => md5( mt_rand(0, 500) ),
     'group_parent' => 91
 );
 //Add the WHERE clauses
